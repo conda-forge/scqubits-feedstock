@@ -1,6 +1,6 @@
 
 {% set name = "scqubits" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 05df83f32d9002ae72164e2de575542b9a5003c14cf70066f25b3b317bffcb8f
+  sha256: 7d10f5e73119612a82dbc603898fe6c6e198e5e7b0ee95bdd7d322dfa0253074
 
 build:
   number: 0
