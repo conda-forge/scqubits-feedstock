@@ -11,7 +11,7 @@ source:
   sha256: d2aeb1fe9ec01324d29dc5dfe5c0c727a1edbd389831ca1f034f53aca1de8a6c
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py<35]
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -29,7 +29,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - cython >=0.28.5
     - scipy >=1.1.0
-    - matplotlib >=3.0.0
+    - matplotlib-base >=3.0.0
     - qutip >=4.3
     - h5py >=2.7.1
     - tqdm
