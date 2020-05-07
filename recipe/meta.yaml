@@ -1,6 +1,5 @@
-
 {% set name = "scqubits" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 80fb60da4e6d4c8ec02169974635afb3c26ce90e060ebd9d9c7d22243aae744e
+  sha256: ebc34b0badaa37646691820935bcd0ac4e319c2e4cd46bde48b3ca71ed5f2bc3
 
 build:
   number: 0
-  skip: True  # [py<35]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  skip: true  # [py<35]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -44,7 +43,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Superconducting qubits in Python'
+  summary: Superconducting qubits in Python
 
 
   description: |
