@@ -33,6 +33,7 @@ requirements:
     - h5py >=2.7.1
     - tqdm
     - ipywidgets
+    - typing_extensions
 
 test:
   imports:
