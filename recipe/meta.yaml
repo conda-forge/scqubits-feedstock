@@ -1,5 +1,5 @@
 {% set name = "scqubits" %}
-{% set version = "2.2.2" %}
+{% set version = "3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 28e3ff6575d2788b09d47ff3e349771164cf57fab3c30d425fb7709a81ce9f2f
+  sha256: 409608deb9196f143e632f9cdc14d4a86704142c3823c4d814f155e60928778f
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<35]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -37,6 +37,8 @@ requirements:
     - h5py >=2.7.1
     - tqdm
     - ipywidgets
+    - sympy
+    - pyyaml
     - typing_extensions
 
 test:
