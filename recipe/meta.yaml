@@ -46,6 +46,7 @@ test:
     - scqubits
   requires:
     - pytest
+    - pathos
   commands:
     - pytest --pyargs scqubits
 
