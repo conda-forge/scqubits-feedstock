@@ -44,6 +44,11 @@ requirements:
 test:
   imports:
     - scqubits
+  requires:
+    - pytest
+    - pathos
+  commands:
+    - pytest --pyargs scqubits
 
 about:
   home: https://github.com/scqubits/scqubits
