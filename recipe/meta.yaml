@@ -46,8 +46,6 @@ test:
     - scqubits
   requires:
     - pytest
-  source_files:
-    - tests
   commands:
     - pytest --pyargs scqubits
 
