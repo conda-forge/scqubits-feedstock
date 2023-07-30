@@ -25,12 +25,12 @@ requirements:
     - python
     - pip
     - numpy
-    - cython>=0.29.20,<3.0.0
+    - cython >=0.29.20,<3.0.0
   run:
     - python
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - cython>=0.29.20,<3.0.0
+    - cython >=0.29.20,<3.0.0
     - scipy >=1.1.0
     - matplotlib-base >=3.0.0
     - qutip >=4.3.1
