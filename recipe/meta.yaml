@@ -24,7 +24,6 @@ requirements:
   host:
     - python
     - pip
-    - setuptools
     - numpy
     - cython >=0.29.20
   run:
