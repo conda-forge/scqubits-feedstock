@@ -1,5 +1,5 @@
 {% set name = "scqubits" %}
-{% set version = "4.2.0" %}
+{% set version = "4.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 76351bd6bf4d027762b8977e0758d4c14371df14fdb4cf605baa3b94b64d6348
+  sha256: 806f171d4b5905af3f8d4c68fce461be91eab38466fa4fbe87b71ec7b167fc7b
 
 build:
   number: 0
@@ -21,11 +21,9 @@ requirements:
     - cython >=0.29.20                       # [build_platform != target_platform]
     - numpy >=1.14.2                         # [build_platform != target_platform]
     - {{ compiler('cxx') }}
-    - {{ stdlib('c') }}
   host:
     - python
     - pip
-    - setuptools
     - numpy
     - cython >=0.29.20
   run:
@@ -33,7 +31,8 @@ requirements:
     - cycler
     - matplotlib >=3.5.1
     - numpy >=1.14.2
-    - qutip >=4.3.1 
+    - qutip >=4.3.1  # [py>=39]
+    - qutip <5.0  # [py<39]
     - scipy >=1.5
     - dill
     - sympy
