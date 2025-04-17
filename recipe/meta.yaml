@@ -1,5 +1,6 @@
 {% set name = "scqubits" %}
 {% set version = "4.3" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
